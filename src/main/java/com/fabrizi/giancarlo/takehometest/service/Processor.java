@@ -43,7 +43,7 @@ public class Processor {
     public ResponseEntity processRequest(String organizationName, String apiUrlReposList) throws InvalidInputException {
         logger.info("processRequest() - IN - input: [{organizationName}, [{apiUrlReposList}]", organizationName, apiUrlReposList);
         List<TopUser> listToReturnSorted = new ArrayList<>();
-        if (organizationName.isBlank()) {
+        if (organizationName.isEmpty()) {
             throw new InvalidInputException("Request param organizationName is empty");
         }
         //prepare restTemplate with Token
