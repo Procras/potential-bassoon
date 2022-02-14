@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>com.fabrizi.giancarlo</groupId>
 	<artifactId>take-home-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>take-home-test</name>
 	<description>Take home test</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

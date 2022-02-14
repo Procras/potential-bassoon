@@ -19,26 +19,26 @@ public class Processor {
 
     private static final Logger logger = LoggerFactory.getLogger(Processor.class);
 
-    @Value("${TOKEN}")
-    private String token; //"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"
+    @Value("${app.secret}")
+    private String token;
 
     @Value("${urlTopContributorsPerRepo}")
-    private String urlTopContributorsPerRepo; //"https://api.github.com/repos/%s/%s/contributors?q=contributions&order=desc"
+    private String urlTopContributorsPerRepo;
 
     @Value("${urlCommitsPerRepo}")
-    private String urlCommitsPerRepo; //String urlCommitsPerRepo = "https://api.github.com/repos/%s/%s/commits";
+    private String urlCommitsPerRepo;
 
     @Value("${userInfoBio}")
-    private String userInfoBio; //String userInfoBio = "https://api.github.com/users/%s";
+    private String userInfoBio;
 
     @Value("${apiUrlTopContributorsPerRepo}")
-    private String apiUrlTopContributorsPerRepo; //String apiUrlTopContributorsPerRepo = "https://api.github.com/repos/%s/%s/contributors?q=contributions&order=desc";
+    private String apiUrlTopContributorsPerRepo;
 
     @Value("${apiUserInfo}")
-    private String apiUserInfo; //String apiUserInfo = "https://api.github.com/users/%s";
+    private String apiUserInfo;
 
     @Value("${apiUrlCommitsPerRepo}")
-    private String apiUrlCommitsPerRepo; //String apiUrlCommitsPerRepo = "https://api.github.com/repos/%s/%s/commits";
+    private String apiUrlCommitsPerRepo;
 
     public ResponseEntity processRequest(String organizationName, String apiUrlReposList) throws InvalidInputException {
         logger.info("processRequest() - IN - input: [{organizationName}, [{apiUrlReposList}]", organizationName, apiUrlReposList);
